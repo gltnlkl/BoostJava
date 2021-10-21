@@ -12,7 +12,7 @@ public class ServerExampleH {
 	public static void main(String[] args) {
 		// lıst aldıgım ıcın dataInputStream yerıne objectInputStream
 		// kullanıyoruz.
-		// tum yorumlar boyle sacma gorunecek
+		// tum yorumlar boyle sacma gorunecek daha fazla yorum
 		try {
 			ServerSocket serverSocket = new ServerSocket(5555);
 			

@@ -3,25 +3,40 @@ package com.baa.boost032.Lambda;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class _1_ForEach {
 	
 	public static void main(String[] args) {
 		
-		String[] dizi = { "Adana", "Nev√æehir", "√?stanbul", "Mu√æ" };
-		// Diziyi Liste √ßevirdik
-		List<String> listem_0 = Arrays.asList(dizi);
-		//////////////////////////////////////////////
-		List<String> listem = Arrays.asList("Adana", "Nev√æehir", "√?stanbul", "Mu√æ");
-		/////////////////////////////////////////////
-		List<String> listem2 = new ArrayList<String>();
-		listem2.add("Adana");
-		listem2.add("Nev√æehir");
-		listem2.add("√?stanbul");
-		listem2.add("Mu√æ");
-		listem2.stream().forEach(System.out::print);
-		System.out.println("\n//////////");
-		listem2.forEach(System.out::print);
+		String[] dizi = { "Adana", "Nevsehir", "Istanbul", "Mus", "Malatya" };
+		
+		List<String> myList = Arrays.asList(dizi); // diziyi listeye Áevir
+		
+		// List<String> myListNew = new ArrayList<String>();
+		//
+		// myListNew.add("Adana");
+		// myListNew.add("Nevsehir");
+		// myListNew.add("Istanbul");
+		// myListNew.add("Mus");
+		
+		// myListNew.forEach(System.out::print);
+		
+		System.out.println();
+		
+		myList.stream().forEach(System.out::print);
+		
+		System.out.println("\n");
+		
+		myList.stream().sorted().forEach(System.out::print);
+		
+		System.out.println("\n");
+		
+		List<String> newList = new ArrayList<String>();
+		
+		newList = myList.stream().filter((temp) -> "Malatya".equals(temp)).collect(Collectors.toList());
+		
+		newList.forEach(System.out::println);
 		
 	}
 }

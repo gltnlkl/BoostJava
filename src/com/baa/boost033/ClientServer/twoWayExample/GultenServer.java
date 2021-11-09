@@ -8,9 +8,6 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.time.LocalDateTime;
-
-import com.baa.boost033.clientServer.ClientServer.twoWay.StaticPort;
 
 public class GultenServer {
 	
@@ -21,11 +18,10 @@ public class GultenServer {
 			String receiveMassege;
 			String sendMassege;
 			
-			Person personServer = new Person("Gülten", LocalDateTime.now());
-			
 			ServerSocket serverSocket = new ServerSocket(StaticPort.PORT);
 			
 			System.out.println("Chat Aplikasyonu Hazır! Server Gülten");
+			
 			Socket socket = serverSocket.accept();
 			
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
@@ -38,7 +34,9 @@ public class GultenServer {
 			while (true) {
 				if ((receiveMassege = receiveRead.readLine()) != null) {
 					
-					msg = personServer.getName() + " " + " " + personServer.getTime();
+					Person personServer = new Person("Gülten");
+					
+					msg = personServer.getId() + " " + personServer.getName() + " " + Time.FTIME;
 					
 					System.out.println("Başak: " + msg);
 					System.out.println(receiveMassege);

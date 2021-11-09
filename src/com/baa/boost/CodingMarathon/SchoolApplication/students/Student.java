@@ -29,7 +29,7 @@ public class Student extends Person implements Attainable {
 			PhoneNumber phoneNumber, String classNum, boolean isAttendTheClass, ClassName className) {
 		super(name, gender, age, occupation, startingDate, leavingDate, phoneNumber);
 		this.classNum = classNum;
-		this.className = className;
+		this.setClassName(className);
 		this.isAttendTheClass = isAttendTheClass;
 	}
 	
@@ -58,6 +58,14 @@ public class Student extends Person implements Attainable {
 	
 	public void setAttendTheClass(boolean isAttendTheClass) {
 		this.isAttendTheClass = isAttendTheClass;
+	}
+
+	public ClassName getClassName() {
+		return className;
+	}
+
+	public void setClassName(ClassName className) {
+		this.className = className;
 	}
 	
 }

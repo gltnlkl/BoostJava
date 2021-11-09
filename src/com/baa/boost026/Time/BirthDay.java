@@ -9,11 +9,11 @@ public class BirthDay {
 		
 		LocalDate birthDay = LocalDate.of(1988, Month.SEPTEMBER, 25);
 		
-		System.out.println("Doğum günü ayın kaçındadır ? \n" + birthDay.getDayOfMonth());
+		System.out.println("Dogum gunu ayin kacindadir ? \n" + birthDay.getDayOfMonth());
 		
-		System.out.println("Doğduğu gün nedir ? \n" + birthDay.getDayOfWeek());
+		System.out.println("Dogdugu gun nedir ? \n" + birthDay.getDayOfWeek());
 		
-		System.out.println("Doğum tarihi nedir? \n" + birthDay);
+		System.out.println("Dogum tarihi nedir? \n" + birthDay);
 		
 	}
 	

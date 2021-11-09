@@ -1,4 +1,4 @@
-package com.baa.boost033.ClientServer.Utils;
+package com.baa.boost033.ClientServer.DataOutInput;
 
 import java.io.DataInputStream;
 import java.net.ServerSocket;

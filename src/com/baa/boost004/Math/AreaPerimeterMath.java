@@ -1,11 +1,9 @@
 package com.baa.boost004.Math;
 
-vpackage com.bilgeadam.boostMath;
-
 import java.util.Scanner;
 
 public class AreaPerimeterMath {
-
+	
 	public static void main(String[] args) {
 		
 		// daire alanı = pi*r^2

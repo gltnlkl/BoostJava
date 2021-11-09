@@ -21,7 +21,7 @@ public class _2_Sorted {
 		listem2.add("Nevþehir");
 		listem2.add("�?stanbul");
 		listem2.add("Muþ");
-		listem2.stream().forEach(System.out::print);
+		listem2.stream().sorted().forEach(System.out::print);
 		System.out.println("\n//////////");
 		listem2.forEach(System.out::print);
 		

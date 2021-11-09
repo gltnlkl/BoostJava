@@ -34,13 +34,12 @@ public class PersonMain {
 			
 			if (person.getPersonGender().equalsIgnoreCase(Gender.ERKEK.toString())) {
 				Calendar calender = Calendar.getInstance();
-				person.setRetiredDate(LocalDate.of(BirthYear+65, BirthMonth, BirthDay));
-				person.setNowDate(LocalDate.of(calender.get(Calendar.YEAR), calender.get(Calendar.MONTH), calender.get(Calendar.DAY_OF_MONTH)));
-			
-			Male male = new Male(1,person)
-			
-			
-			
+				person.setRetiredDate(LocalDate.of(BirthYear + 65, BirthMonth, BirthDay));
+				person.setNowDate(LocalDate.of(calender.get(Calendar.YEAR), calender.get(Calendar.MONTH),
+						calender.get(Calendar.DAY_OF_MONTH)));
+				
+				Male male = new Male();
+				
 			} else if (person.getPersonGender().equalsIgnoreCase(Gender.KADIN.toString())) {
 				
 			}

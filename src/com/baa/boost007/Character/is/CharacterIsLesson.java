@@ -8,14 +8,13 @@ public class CharacterIsLesson {
 		
 		Scanner input = new Scanner(System.in);
 		
-	
 		while (true) {
 			
 			System.out.println("Lutfen bir karakter giriniz:");
 			
 			String string = input.nextLine();
 			
-			char character = string.charAt(0); // lutfen detayli acıiklayiniz ???
+			char character = string.charAt(0);
 			
 			if (Character.isDigit(character)) {
 				System.out.println("Bu bir sayidir");
@@ -29,4 +28,3 @@ public class CharacterIsLesson {
 		}
 	}
 }
-

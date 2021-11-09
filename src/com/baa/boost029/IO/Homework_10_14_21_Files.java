@@ -12,25 +12,25 @@ import java.util.Map;
 import com.baa.boost026.Time.ConsoleHelper;
 
 // 2.SORU
-// 2.adım c:sürücüsünü altında kullanıcı tarafından "dizin" adından File ile
-// java tarafından dizin oluşturalım
+// 2.adim c:surucusunu altinda kullanici tarafindan "dizin" adindan File ile
+// java tarafindan dizin olusturalim
 
-// 3.adım c:\\dizin altına kullanıcı tarafından "bilgeadam.txt" dosya
-// oluşturalım bilgeadam.txt dosyası oluşturalım
+// 3.adim c:\\dizin altina kullanici tarafindan "bilgeadam.txt" dosya
+// olusturalim bilgeadam.txt dosyasi olusturalim
 
-// Seçenekli bir şekilde
-// 0-Çıkış
+// Secenekli bir sekilde
+// 0-Cikis
 // 1-dosyaCreate
 // 2-dizinCreate
 // 3-Add(Yazma)
 // 4-Read(Okuma)
 // 5-Delete(Silmek)
-// 6-Dosya özellikleri
-// 6.1 Dosya mı
-// bu dizin mi ? dosya mı?
-// yazılabilrinir mi ? okunabilinir mi çalışabilinir mi?
+// 6-Dosya ozellikleri
+// 6.1 Dosya mi
+// bu dizin mi ? dosya mi?
+// yazilabilrinir mi ? okunabilinir mi calisabilinir mi?
 
-// URL URI araştırmak ödevi
+// URL URI arastirmak odevi
 
 public class Homework_10_14_21_Files {
 	
@@ -46,7 +46,7 @@ public class Homework_10_14_21_Files {
 			
 			switch (choose()) {
 				case "0":
-					System.out.println("Sistemden çıkılıyor.");
+					System.out.println("Sistemden cikiliyor.");
 					isloop = false;
 					break;
 				case "1":
@@ -98,7 +98,7 @@ public class Homework_10_14_21_Files {
 			String toplamSatirlar = "";
 			String satir = "";
 			
-			while ((satir = bufferedReader.readLine()) != null) { // () !=null ıcı bos degılse
+			while ((satir = bufferedReader.readLine()) != null) { // () !=null ici bos degilse
 				toplamSatirlar = toplamSatirlar + satir + "\n";
 			}
 			
@@ -114,9 +114,9 @@ public class Homework_10_14_21_Files {
 		
 		try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path, true))) {
 			
-			bufferedWriter.write(ConsoleHelper.readString("Lütfen yazılmasını istediğiniz bilgileri giriniz."));
+			bufferedWriter.write(ConsoleHelper.readString("Lutfen yazilmasini istediginiz bilgileri giriniz."));
 			bufferedWriter.flush();
-			System.out.println("Yazma işlemi başarılı");
+			System.out.println("Yazma islemi basarili");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -126,7 +126,7 @@ public class Homework_10_14_21_Files {
 	public static String choose() {
 		
 		String selection = ConsoleHelper.readString(
-				"Lütfen yapmak isteğiniz işlemi seçiniz:\n0-Çıkış\n1-Yeni klasör Oluşturma\n2-Yeni dosya oluşturma\n3-Oluşturulan dosyaya veri yazma\n4-Oluşturulan dosyayı okuma\n5-Oluşturulan dosyayı silme\n6-Dosya özellikleri\n6.1-Dosya mı?\n6.2-Dizin mi?\n6.3-Yazılabilrinir mi?\n6.4-Okunabilinir mi?\n6.5-Çalışabilinir mi?");
+				"Lutfen yapmak isteginiz islemi seciniz:\n0-Cikis\n1-Yeni klasor Olusturma\n2-Yeni dosya olusturma\n3-Olusturulan dosyaya veri yazma\n4-Olusturulan dosyayi okuma\n5-Olusturulan dosyayi silme\n6-Dosya ozellikleri\n6.1-Dosya mi?\n6.2-Dizin mi?\n6.3-Yazilabilrinir mi?\n6.4-Okunabilinir mi?\n6.5-Calisabilinir mi?");
 		;
 		return selection;
 	}
@@ -135,15 +135,15 @@ public class Homework_10_14_21_Files {
 		String path = "";
 		
 		path = ConsoleHelper.readString(
-				"Lütfen dosya oluşturmak istediğiniz yolu (D:\\bilgeAdamDeneme\\folder) şeklinde belirtiniz");
+				"Lutfen dosya olusturmak istediginiz yolu (D:\\bilgeAdamDeneme\\folder) seklinde belirtiniz");
 		
 		File myFolder = new File(path);
 		
 		boolean bool = myFolder.mkdir();
 		if (bool) {
-			System.out.println("Klasör oluşturuldu: " + myFolder.getName());
+			System.out.println("Klasor olusturuldu: " + myFolder.getName());
 		} else {
-			System.out.println("Klasör oluşturulamadı.");
+			System.out.println("Klasor olusturulamadi.");
 		}
 		return path;
 	}
@@ -154,14 +154,14 @@ public class Homework_10_14_21_Files {
 		String path = "";
 		try {
 			path = ConsoleHelper.readString(
-					"Lütfen dosya oluşturmak istediğiniz yolu (D:\\bilgeAdamDeneme\\folder\\homework.txt) şeklinde belirtiniz");
+					"Lutfen dosya olusturmak istediginiz yolu (D:\\bilgeAdamDeneme\\folder\\homework.txt) seklinde belirtiniz");
 			File myFile = new File(path);
 			
 			if (myFile.createNewFile()) {
-				System.out.println("Dosya oluşturuldu: " + myFile.getName());
+				System.out.println("Dosya olusturuldu: " + myFile.getName());
 				
 			} else {
-				System.out.println("Dosya olusturulamadı,zaten mevcut.");
+				System.out.println("Dosya olusturulamadi,zaten mevcut.");
 			}
 			
 			myMap.put("path", path);

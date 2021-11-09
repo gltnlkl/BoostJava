@@ -8,13 +8,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.baa.boost.CodingMarathon.SchoolApplication.Utils.GltnUtils;
 import com.baa.boost.CodingMarathon.SchoolApplication.employers.Officer;
 import com.baa.boost.CodingMarathon.SchoolApplication.employers.Servant;
 import com.baa.boost.CodingMarathon.SchoolApplication.employers.Teacher;
 import com.baa.boost.CodingMarathon.SchoolApplication.enums.ClassName;
 import com.baa.boost.CodingMarathon.SchoolApplication.students.Student;
-
-import gUtils.GltnUtils;
 
 public class SchoolMainSystem {
 	
@@ -22,16 +21,16 @@ public class SchoolMainSystem {
 		
 		Map<Integer, String> mapList = new HashMap<Integer, String>();
 		
-		mapList.put(1, "Yeni Çalışan");
-		mapList.put(2, "Çalışan Listesi");
-		mapList.put(3, "Eski Çalışanlar");
+		mapList.put(1, "Yeni calışan");
+		mapList.put(2, "calışan Listesi");
+		mapList.put(3, "Eski calışanlar");
 		mapList.put(4, "Yeni Sınıf");
 		mapList.put(5, "Öğrenci Atama");
 		mapList.put(6, "Öğrenci Listesi");
 		mapList.put(7, "Öğrencinin Sınıfları");
 		mapList.put(8, "Hediye Listesi");
 		mapList.put(9, "Maaş Listesi");
-		mapList.put(10, "Uygulamadan Çıkış");
+		mapList.put(10, "Uygulamadan cıkış");
 		mapList.put(11, "BONUS - Dosya Verileri Local Dosyaya Yazdırma işlemi");
 		return mapList;
 		
@@ -42,7 +41,8 @@ public class SchoolMainSystem {
 		// sozlu anlatım;
 		// ooncelıkle kullanıcadan bır fıle yolu ısteyerek dosya olusturuldu.
 		// Olusturulan dosyada buffereWriter ile mevcut bilgiler yazdılırdı.
-		// Yazdırma ıslemı ıcın olusturulmus Teacher - Student Servent ve Officer in
+		// Yazdırma ıslemı ıcın olusturulmus Teacher - Student Servent ve Officer
+		// in
 		// bilgilerinin olduğu array listeler string e
 		// donusturuldu.
 		
@@ -119,11 +119,11 @@ public class SchoolMainSystem {
 					break;
 				case 2:
 					
-					System.out.println("Çalışan Listesi:\n");
+					System.out.println("calışan Listesi:\n");
 					sortOfWorker(ListOfPeople.teacher(), ListOfPeople.Officer(), ListOfPeople.servant());
 					break;
 				case 3:
-					System.out.println("Eski Çalışanlar:\n");
+					System.out.println("Eski calışanlar:\n");
 					break;
 				case 4:
 					System.out.println("Yeni sınıf için lütfen yetkili olarak giriş yapınız.");

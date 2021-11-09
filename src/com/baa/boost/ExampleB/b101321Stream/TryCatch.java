@@ -18,13 +18,13 @@ public class TryCatch {
 				methodC();
 			}
 		} catch (IOException ex) {
-			System.out.println("dslkc�ldskf�lsdk�lf");
+			System.out.println("dslkccldskfclsdkclf");
 		}
 	}
 	
 	private static void methodC() throws IOException {
 		System.out.println("metod C");
-		throw new IOException("Sa�ma sapan");
+		throw new IOException("Sacma sapan");
 	}
 	
 	private static void methodB() {
@@ -34,7 +34,7 @@ public class TryCatch {
 	
 	private static void methodA() throws FileNotFoundException {
 		System.out.println("metod A");
-		throw new FileNotFoundException("Sa�ma sapan");
+		throw new FileNotFoundException("Sacma sapan");
 	}
 	
 }

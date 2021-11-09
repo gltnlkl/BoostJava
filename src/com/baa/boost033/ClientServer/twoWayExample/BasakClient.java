@@ -8,9 +8,6 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.time.LocalDateTime;
-
-import com.baa.boost033.clientServer.ClientServer.twoWay.StaticPort;
 
 public class BasakClient {
 	
@@ -18,15 +15,13 @@ public class BasakClient {
 		
 		try {
 			
-			Person personClient = new Person("Başak", LocalDateTime.now());
-			
-			String receiveMassege; // mesaj almak ıcın
+			String receiveMassege; // mesaj almak icin
 			String sendMassege; // mesaj gondermek
 			
-			// port acılımı yapıyoruz
+			// port acmak icin yapiyoruz
 			Socket socket = new Socket("localhost", StaticPort.PORT);
 			
-			// client veri gönderecek
+			// client veri gÃ¶nderecek
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 			OutputStream outputStream = socket.getOutputStream();
 			PrintWriter printWriter = new PrintWriter(outputStream, true);
@@ -35,9 +30,11 @@ public class BasakClient {
 			InputStream inputStream = socket.getInputStream();
 			BufferedReader bufferedReader2 = new BufferedReader(new InputStreamReader(inputStream));
 			
-			System.out.println("Lütfen mesaj yazınız Client Basak");
+			System.out.println("Lütfen mesaj yazınız. Client Başak");
 			
 			while (true) {
+				
+				Person personClient = new Person("Başak");
 				
 				sendMassege = bufferedReader.readLine();
 				printWriter.println(sendMassege);
@@ -45,7 +42,7 @@ public class BasakClient {
 				
 				if ((receiveMassege = bufferedReader2.readLine()) != null) {
 					
-					String msg = personClient.getName() + " " + " " + personClient.getTime();
+					String msg = personClient.getId() + " " + personClient.getName() + " " + Time.FTIME;
 					System.out.println("Gülten: " + msg);
 					System.out.println(receiveMassege);
 					String writeFile = msg + " Massege: " + sendMassege;

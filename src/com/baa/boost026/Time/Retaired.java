@@ -33,20 +33,20 @@ public class Retaired {
 		Scanner input = new Scanner(System.in);
 		
 		try {
-			System.out.println("Lütfen doğum gününüzü (yyyy-mm-dd) formatında giriniz:");
+			System.out.println("Lutfen dogum gununuzu (yyyy-mm-dd) formatinda giriniz:");
 			String aDate = input.next();
 			LocalDate dateOfBirth = LocalDate.parse(aDate);
 			
 			long age = dateOfBirth.until(LocalDate.now(), ChronoUnit.YEARS);
 			
-			name = ConsoleHelper.readString("Lütfen adınızı giriniz.");
-			surName = ConsoleHelper.readString("Lütfen soyadınızı giriniz.");
-			gender = Gender.stringToGender(ConsoleHelper.readString("Lütfen erkek için (e) kadıın için (k) giriniz."));
+			name = ConsoleHelper.readString("Lutfen adinizi giriniz.");
+			surName = ConsoleHelper.readString("Lutfen soyadinizi giriniz.");
+			gender = Gender.stringToGender(ConsoleHelper.readString("Lutfen erkek icin (e) kadin icin (k) giriniz."));
 			
 			if (gender == Gender.ERKEK) {
 				
 				System.out.println(
-						"Sayın " + name + " " + surName + " emekliliğinize kalan süreniz " + (65 - age) + " yıl.");
+						"Sayin " + name + " " + surName + " emekliliginize kalan s�reniz " + (65 - age) + " yil.");
 			} else {
 				
 				System.out.println(

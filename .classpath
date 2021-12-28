@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lombok.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAVA_BOOST"/>
+	<classpathentry kind="lib" path="D:/JavaJar/lombok.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

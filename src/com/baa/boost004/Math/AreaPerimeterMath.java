@@ -17,7 +17,9 @@ public class AreaPerimeterMath {
 		double areaCircle = (Math.PI * Math.pow(radius, 2));
 		double perimeterCircle = (2 * Math.PI * radius);
 		
-		System.out.println("Yari capi girilen dairenin alani:" + areaCircle);
+		math.
+				
+				System.out.println("Yari capi girilen dairenin alani:" + areaCircle);
 		System.out.println("Yari capi girilen dairenin cevresi:" + perimeterCircle);
 		input.close();
 	}

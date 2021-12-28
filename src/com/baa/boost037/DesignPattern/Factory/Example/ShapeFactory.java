@@ -1,4 +1,4 @@
-package com.baa.boost037.DesignPattern.Factory;
+package com.baa.boost037.DesignPattern.Factory.Example;
 
 public class ShapeFactory {
 	
